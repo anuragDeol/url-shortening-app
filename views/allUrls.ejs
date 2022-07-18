@@ -1,0 +1,22 @@
+<link rel='stylesheet' href='/css/allUrls.css'>
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>All URLs</title>
+</head>
+<body>
+    <a href="/"> Shorten another URL </a>
+    <ul>
+        <% links.forEach(link => {  %>
+            <li>
+                <p><a href='<%= link.fullUrl %>'> <%= link.fullUrl %> </a></p>
+                <p><a href='<%= link.shortUrl %>'> <%= link.shortUrl %> </a></p>
+                <p><a href='<%= link.clicks %>'></a> Clicks: <%= link.clicks %> </p>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>

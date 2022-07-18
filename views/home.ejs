@@ -9,19 +9,12 @@
 </head>
 <body>
     <form action='/shortenUrl' method="post">
-        <input type='url' name='fullUrl' placeholder="paste your url here..." required>
+        <input type='url' name='fullUrl' placeholder="Paste your URL here..." required>
         <button type="submit">Shorten the URL</button>
     </form>
+        
 
-    <ul>
-        <% links.forEach(link => {  %>
-            <li>
-                <p><a href='<%= link.fullUrl %>'> <%= link.fullUrl %> </a></p>
-                <p><a href='<%= link.shortUrl %>'> <%= link.shortUrl %> </a></p>
-                <p><a href='<%= link.clicks %>'></a> Clicks: <%= link.clicks %> </p>
-            </li>
-        <% }) %>
-    </ul>
+    <a href="/allUrls">All URLs</a>
 
 </body>
 </html>
